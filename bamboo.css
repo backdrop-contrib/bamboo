@@ -1,0 +1,137 @@
+/**
+ * @file
+ * Custom styles for Bamboo.
+ */
+
+/*** Layout wrapper ***/
+.layout--bamboo.layout {
+  display: block;
+  height: auto;
+}
+
+/*** Sidebar ***/
+.layout--bamboo .l-sidebar {
+  bottom: 0;
+  left: 0;
+  margin-left: -300px;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+  position: fixed;
+  scrollbar-width: none;
+  top: 0;
+  width: 300px;
+}
+/* Re. hiding scrollbar, see: https://stackoverflow.com/a/38994995 */
+.layout--bamboo .l-sidebar::-webkit-scrollbar {
+  display: none;
+}
+/* Sidebar active */
+.layout--bamboo.sidebar-active .l-sidebar {
+  margin-left: 0;
+}
+/* Wide screens */
+@media (min-width: 900px) {
+  .layout--bamboo .l-sidebar {
+    margin-left: 0;
+  }
+}
+
+/*** Main content ***/
+.layout--bamboo .l-main {
+  float: right;
+  width: 100%;
+}
+/* Sidebar active */
+.layout--bamboo.sidebar-active .l-main {
+  width: calc(100% - 300px);
+}
+/* Wide screens */
+@media (min-width: 900px) {
+  .layout--bamboo .l-main {
+    width: calc(100% - 300px);
+  }
+}
+
+/*** Sidebar toggle ***/
+.layout--bamboo .l-sidebar-toggle {
+  background: #fff;
+  cursor: pointer;
+  height: 34px;
+  left: 10px;
+  position: fixed;
+  top: 10px;
+  width: 34px;
+  z-index: 999;
+}
+.layout--bamboo .l-sidebar-toggle span,
+.layout--bamboo .l-sidebar-toggle span:before,
+.layout--bamboo .l-sidebar-toggle span:after {
+  background: #000;
+  height: 2px;
+  left: 5px;
+  position: absolute;
+  text-indent: -9999em;
+  top: 16px;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  width: 24px;
+}
+.layout--bamboo .l-sidebar-toggle span:before {
+  content: '';
+  left: 0;
+  top: -7px;
+}
+.layout--bamboo .l-sidebar-toggle span:after {
+  content: '';
+  left: 0;
+  top: 7px;
+}
+/* Sidebar active */
+.layout--bamboo.sidebar-active .l-sidebar-toggle {
+  left: 310px;
+}
+.layout--bamboo.sidebar-active .l-sidebar-toggle span {
+  background: transparent;
+  height: 0;
+}
+.layout--bamboo.sidebar-active .l-sidebar-toggle span:before {
+  top: 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.layout--bamboo.sidebar-active .l-sidebar-toggle span:after {
+  top: 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+/* Wide screens */
+@media (min-width: 900px) {
+  .layout--bamboo .l-sidebar-toggle {
+    display: none;
+  }
+}
+
+/*** Admin bar support ***/
+.admin-bar body > .layout--bamboo .l-sidebar,
+.admin-bar body > .layout--bamboo .l-sidebar-toggle {
+  margin-top: 33px;
+}
+
+/*** Layouts UI form ***/
+.layout-content-form .layout--bamboo {
+  overflow: hidden;
+}
+.layout-content-form .layout--bamboo .l-sidebar {
+  float: left;
+  margin-left: 0;
+  margin-right: 2%;
+  overflow-y: auto;
+  position: static;
+  width: 30%;
+}
+.layout-content-form .layout--bamboo .l-main {
+  width: 68%;
+}
+.layout-content-form .layout--bamboo .l-sidebar-toggle {
+  display: none;
+}

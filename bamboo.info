@@ -1,0 +1,9 @@
+name = Bamboo
+backdrop = 1.x
+type = layout
+file = bamboo.php
+
+regions[sidebar] = Sidebar
+regions[content] = Content
+
+stylesheets[all][] = bamboo.css
