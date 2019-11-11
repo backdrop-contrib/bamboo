@@ -1,16 +1,16 @@
 Bamboo
 ======
 
-Bamboo is a simple layout with two regions: Sidebar and Content. The sidebar is
-fixed to the left of the screen and is useful for displaying the site's header,
-navigation and footer. On smaller screens, a toggle button shows/hides the
-sidebar.
+Bamboo is a simple layout template with two regions: Sidebar and Content. The
+sidebar is fixed to the left of the screen and is useful for displaying the
+site's header, navigation and footer. On smaller screens, a toggle button
+shows/hides the sidebar.
 
 Installation
 ------------
 
-- Install and configure this module using the official Backdrop CMS instructions
-  at https://backdropcms.org/guide/layouts.
+- Install and configure this layout template using the official Backdrop CMS
+  instructions at https://backdropcms.org/guide/layouts.
 
 Issues
 ------
