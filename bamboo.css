@@ -11,6 +11,7 @@
 
 /*** Sidebar ***/
 .layout--bamboo .l-sidebar {
+  background: #fff;
   bottom: 0;
   left: 0;
   margin-left: -300px;
@@ -19,7 +20,9 @@
   position: fixed;
   scrollbar-width: none;
   top: 0;
+  transition: margin 0.2s;
   width: 300px;
+  z-index: 99;
 }
 /* Re. hiding scrollbar, see: https://stackoverflow.com/a/38994995 */
 .layout--bamboo .l-sidebar::-webkit-scrollbar {
@@ -41,10 +44,6 @@
   float: right;
   width: 100%;
 }
-/* Sidebar active */
-.layout--bamboo.sidebar-active .l-main {
-  width: calc(100% - 300px);
-}
 /* Wide screens */
 @media (min-width: 900px) {
   .layout--bamboo .l-main {
@@ -60,6 +59,7 @@
   left: 10px;
   position: fixed;
   top: 10px;
+  transition: left 0.2s;
   width: 34px;
   z-index: 999;
 }
