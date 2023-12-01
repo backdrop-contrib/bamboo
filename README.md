@@ -21,11 +21,12 @@ https://github.com/backdrop-contrib/bamboo/issues.
 Current Maintainers
 -------------------
 
-- Seeking maintainer(s)
+ - [Tim Erickson](https://github.com/stpaultim)
 
 Credits
 -------
 
+- Ongoing support this theme is provided by [Simplo.site](https://www.simplo.site)
 - Created for Backdrop CMS by Peter Anderson (https://github.com/BWPanda).
 
 License
